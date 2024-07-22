@@ -1,6 +1,6 @@
 # Install the Ollama Docker Image in OpenSUSE
 
-The following instructions descripe how to run Olamma in Docker to run in Windows Subsystem for Linux OpenSUSE instance.  The document assumes that your your system has a suported Nvidia card. 
+The following instructions descripe how to run Ollamma in Docker to run in Windows Subsystem for Linux OpenSUSE instance.  The document assumes that your your system has a suported Nvidia card. See the Ollama documentation listed in the sources below for information on ATI Graphics cards. 
 
 ## Step 1: Install OpenSUSE in WSL
 
@@ -160,7 +160,7 @@ Note: that ollama uses a volume to store its training data. You'll need to creat
         docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
     
 
-The docker image can then be started using:
+4. Run llama3 with the following command:
 
         docker exec -it ollama ollama run llama3
  
