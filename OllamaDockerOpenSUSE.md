@@ -2,22 +2,20 @@
 
 The following instructions descripe how to run Olamma in Docker to run in Windows Subsystem for Linux OpenSUSE instance.  The document assumes that your your system has a suported Nvidia card. 
 
-## Install OpenSUSE in WSL
+## Step 1: Install OpenSUSE in WSL
 
 1. Open the Microsoft Store on the Windows Host
 2. Search on ```OpenSUSE``` and locate the latest distribution
 3. Click on ```free``` to install. 
 
-### OpenSUSE Setup
+## Step 2: Configure OpenSUSE in WSL
 
 1. Click Next to start the install. 
 2. Review the license and click ```next```
 3. Setup your user. Select ```Use this password for system administrator```
 4. Allow the system to update. This may take a few minutes. 
 
-
-
-### Enable Systemd In WSL
+## Step 3: Enable Systemd In WSL
 
 It may be necessary to enable ```systemd```. Follow these steps:
 
@@ -34,7 +32,8 @@ It may be necessary to enable ```systemd```. Follow these steps:
         
 3. Open your OpenSUSE WSL instance. 
 
-### Installing Docker
+## Step 4: Installing Docker
+
 1. Prior to installing docker update the system
 
         zypper update -y
@@ -69,7 +68,7 @@ It may be necessary to enable ```systemd```. Follow these steps:
         docker run hello-world
 
 
-### Install the NVIDIA Container toolkit
+## Step 5: Install the NVIDIA Container toolkit
 
 1. Add the following Repository:
 
@@ -118,7 +117,7 @@ It may be necessary to enable ```systemd```. Follow these steps:
     |  No running processes found                                                 |
     +-----------------------------------------------------------------------------+
     ```
-### Configure Docker 
+## Step 6: Configure Docker 
 
 1. Use the nvidia-ctk to configure docker:
 
@@ -130,7 +129,7 @@ It may be necessary to enable ```systemd```. Follow these steps:
         sudo systemctl restart docker
     
 
-#### Install the cuda-toolkit
+## Step 7: Install the cuda-toolkit
 
 1. Add the cuda-toolkit repo
 
@@ -143,7 +142,7 @@ It may be necessary to enable ```systemd```. Follow these steps:
         sudo zypper install cuda-toolkit
     
 
-## Install the Ollama Docker Image
+## Step 8: Install the Ollama Docker Image
 
 1. Pull the Ollama Docker image from the repo:
 
@@ -165,7 +164,7 @@ The docker image can then be started using:
 
         docker exec -it ollama ollama run llama3
  
-### Sources
+## Sources
 
 1. [How to Reboot WSL in Windows 10 or 11](https://otechworld.com/reboot-wsl-in-windows) 
 
