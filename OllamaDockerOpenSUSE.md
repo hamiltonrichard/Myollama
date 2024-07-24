@@ -152,8 +152,8 @@ It may be necessary to enable ```systemd```. Follow these steps:
     
         docker run -d --gpus=all -v ollama:/$HOME/ollama -p 11434:11434 --name ollama ollama/ollama
    
-        Note: Ollama uses a volume to store its training data. You'll need to create the directory ahead of time.
-              ```--gpus=all`` is used to take advantage of your system's GPU(s).  
+    Note: Ollama uses a volume to store its training data. You'll need to create the directory ahead of time.
+              ```--gpus=all``` is used to take advantage of your system's GPU(s).  
 
 4. Start the container
 
