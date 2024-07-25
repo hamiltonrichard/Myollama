@@ -148,20 +148,14 @@ It may be necessary to enable ```systemd```. Follow these steps:
 
         docker pull ollama/ollama
 
-2.  Run the docker image:
+2. Run the docker image:
     
         docker run -d --gpus=all -v ollama:/$HOME/ollama -p 11434:11434 --name ollama ollama/ollama
    
     Note: Ollama uses a volume to store its training data. You'll need to create the directory ahead of time.
               ```--gpus=all``` is used to take advantage of your system's GPU(s).  
 
-4. Start the container
-
-        docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
-   
-    
-
-5. Run llama3 with the following command:
+3. Run llama3 with the following command:
 
         docker exec -it ollama ollama run llama3
  
