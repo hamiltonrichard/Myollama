@@ -53,12 +53,12 @@ It may be necessary to enable ```systemd```. Follow these steps:
 
 1. Prior to installing docker update the system
 
-        zypper update -y
+        sudo zypper update -y
 
 
 2. Install the docker packages:
 
-        zypper install docker docker-compose docker-compose-switch
+        sudo zypper install docker docker-compose docker-compose-switch
 
 3. Enable Docker 
 
