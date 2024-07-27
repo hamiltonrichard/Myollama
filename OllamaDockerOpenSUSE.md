@@ -105,7 +105,14 @@ It may be necessary to enable ```systemd```. Follow these steps:
         sudo zypper --gpg-auto-import-keys install -y nvidia-container-toolkit
     
     
+3. Configure the Docker runtime
 
+        sudo nvidia-ctk runtime configure --runtime=docker
+
+4. Restart docker
+
+        sudo systemctl restart docker
+   
 3. Run a sample CUDA ontainer: 
 
     
