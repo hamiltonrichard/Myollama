@@ -19,18 +19,35 @@ The following instructions descripe how to run Ollamma in Docker to run in Windo
 
 It may be necessary to enable ```systemd```. Follow these steps:
 
-1. Open ```\etc\wsl.conf``` in the WSL instance and add:
+1. Install the ```wsl-systemd``` pattern. This creates or modifies /etc/wsl.conf and creates the symlinks for ```init```.
 
-    
-        [Systemd]
-        Enable=true
-    
-2. Downdown WSL by executing the following from PowerShell:
-
+        sudo zypper install -t wsl-systemd
+   
+3. Downdown WSL by executing the following from PowerShell:
         
         wsl --shutdown
         
-3. Open your OpenSUSE WSL instance. 
+5. Open your OpenSUSE WSL instance and verify systemd is enabled:
+
+        sudo systemctl list-unit-files --type=service
+
+   Output from the command should look similar to this:
+
+    ```
+    UNIT FILE                                STATE           PRESET
+    autovt@.service                          alias           -
+    backup-rpmdb.service                     static          -
+    backup-sysconfig.service                 static          -
+    boot-sysctl.service                      disabled        disabled
+    ca-certificates.service                  disabled        disabled
+    check-battery.service                    static          -
+    console-getty.service                    enabled-runtime disabled
+    container-getty@.service                 static          -
+    dbus-org.freedesktop.hostname1.service   alias           -
+    dbus-org.freedesktop.locale1.service     alias           -
+    dbus-org.freedesktop.login1.service      alias           -
+    dbus-org.freedesktop.timedate1.service   alias           -
+    ```
 
 ## Step 4: Installing Docker
 
@@ -169,4 +186,4 @@ It may be necessary to enable ```systemd```. Follow these steps:
 
 4. [The Ollama Docker Repository](https://hub.docker.com/r/ollama/ollama)
 
-
+5. [OpenSUSE sytemd docuumentation](https://doc.opensuse.org/documentation/leap/reference/html/book-reference/cha-systemd.html)
