@@ -200,7 +200,8 @@ It may be necessary to enable ```systemd```. Follow these steps:
 
 ### Useful docker commands
 
-For those that aren't familar with docker, you'll need to be familar with the following commands. 
+Not familiar with Docker? The following commands can be used to stop/start the ollama container and also check to see if it is running 
+or not.  
 
 _Stopping the ollama container_
 
