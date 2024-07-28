@@ -1,6 +1,6 @@
 # Install the Ollama Docker Image in OpenSUSE
 
-The following instructions descripe how to run Ollamma in Docker to run in Windows Subsystem for Linux OpenSUSE instance.  The document assumes that your your system has a suported Nvidia card. See the Ollama documentation listed in the sources below for information on ATI Graphics cards.  Information on creating and restoring a backup of the WSL image can be found at the end of the document. 
+The following instructions describe how to run Ollama in Docker to run in Windows Subsystem for Linux OpenSUSE instance.  The document assumes that your your system has a suported Nvidia card. See the Ollama documentation listed in the sources below for information on ATI Graphics cards.  Information on creating and restoring a backup of the WSL image can be found at the end of the document. 
 
 Prior to starting, refer to open issues for the current state of this documentation. 
 
